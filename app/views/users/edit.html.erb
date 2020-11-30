@@ -1,0 +1,33 @@
+<%= form_for @user, url: {action: "update"} do |f| %>
+
+    <% if @user.errors.none? %>
+      <%clas1 = "default"%>
+      <%clas2 = "default"%>
+      <%clas3 = "default"%>
+    <% end %>
+
+    <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+      <%if msg.include?('User name has already been taken') %>
+        <%clas1 = "error"%>
+      <%elsif msg.include?('Email has already been taken')%>
+        <%clas2 = "error"%>
+      <%elsif msg.include?('Password has already been taken')%>
+        <%clas3 = "error"%>
+      <% end %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  User Name: <%= f.text_field :user_name, class:"#{clas1}", placeholder: "Only first name" %><br />
+  Email: <%= f.text_field :email, class:"#{clas2}", placeholder: "example@hotmail.com" %><br />
+  Password: <%= f.text_field :password, class:"#{clas3}", placeholder: "xxxxx" %><br />
+  <%= f.submit "Update" %>
+
+<% end %>
