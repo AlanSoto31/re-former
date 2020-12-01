@@ -4,20 +4,11 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def index
-    @users = User.all
-  end
-
-  def show
-    @user = User.find(params[:id])
-  end
-
   def create
-    # @user = User.new(user_name: params[:user_name], email: params[:email], password: params[:password])
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to new_user_path
+      redirect_to new_users
     else
       render :new
     end
