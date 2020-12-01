@@ -26,6 +26,7 @@
 - `cd re-former`
 - run `bundle install`
 - run `yarn install`
+- run `rails db:migrate`
 - run `rails server`
 
 ### Install
@@ -33,6 +34,15 @@
 - Ruby
 - Ruby on Rails
 - Text Editor
+
+### Routes
+```shell
+  Verb   URI Pattern                                         Controller#Action
+  POST   http://localhost:3000/users(.:format)               users#create
+  GET    http://localhost:3000/users/new(.:format)           users#new
+  GET    http://localhost:3000/users/:id/edit(.:format)      users#edit
+  PUT    http://localhost:3000/users/:id(.:format)           users#update
+ ```
 
 ## Authors
 

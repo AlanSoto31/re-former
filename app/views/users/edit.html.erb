@@ -31,3 +31,28 @@
   <%= f.submit "Update" %>
 
 <% end %>
+
+<!---
+<%= form_tag("/users", method: "POST") do %>
+  <%= label_tag(:user_name, "User Name:") %>
+  <%= text_field_tag(:user_name) %><br><br>
+  <%= label_tag(:email, "Email:") %>
+  <%= text_field_tag(:email) %><br><br>
+   <%= label_tag(:password, "Password:") %>
+  <%= text_field_tag(:password) %><br><br>
+  <%= submit_tag("Submit") %>
+<% end %>
+-->
+
+<!---
+<form action="/users" method="POST" accept-charset="UTF-8">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="user_name">User Name:</label>
+  <input type="text" id="user_name" name="user[user_name]"><br><br>
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="user[email]"><br><br>
+  <label for="password">Password:</label>
+  <input type="text" id="password" name="user[password]"><br><br>
+  <input type="submit" value="Submit">
+</form>
+-->
