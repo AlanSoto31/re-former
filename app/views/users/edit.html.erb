@@ -1,23 +1,6 @@
 <%= form_for @user, url: {action: "update"} do |f| %>
 
-    <% if @user.errors.none? %>
-      <%@clas1 = "default"%>
-      <%@clas2 = "default"%>
-      <%@clas3 = "default"%>
-    <% end %>
-
-    <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <% edit_form_field_errors(msg) %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%edit_form_field_errors%>
   
   User Name: <%= f.text_field :user_name, class:"#{@clas1}", placeholder: "Only first name" %><br />
   Email: <%= f.email_field :email, class:"#{@clas2}", placeholder: "example@hotmail.com" %><br />
@@ -50,3 +33,5 @@
   <input type="submit" value="Submit">
 </form>
 -->
+
+
