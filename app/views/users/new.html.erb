@@ -1,8 +1,8 @@
 
 <%= form_for @user, url: {action: "create"} do |f| %>
   User Name: <%= f.text_field :user_name, placeholder: "Only first name" %><br />
-  Email: <%= f.text_field :email, placeholder: "example@hotmail.com" %><br />
-  Password: <%= f.text_field :password, placeholder: "xxxxx" %><br />
+  Email: <%= f.email_field :email, placeholder: "example@hotmail.com" %><br />
+  Password: <%= f.password_field :password, placeholder: "xxxxx" %><br />
   <%= f.submit "Create" %>
 <% end %>
 
@@ -11,9 +11,9 @@
   <%= label_tag(:user_name, "User Name:") %>
   <%= text_field_tag(:user_name) %><br><br>
   <%= label_tag(:email, "Email:") %>
-  <%= text_field_tag(:email) %><br><br>
+  <%= email_field_tag(:email) %><br><br>  
    <%= label_tag(:password, "Password:") %>
-  <%= text_field_tag(:password) %><br><br>
+  <%= password_field_tag(:password) %><br><br>
   <%= submit_tag("Submit") %>
 <% end %>
 -->
@@ -24,9 +24,9 @@
   <label for="user_name">User Name:</label>
   <input type="text" id="user_name" name="user[user_name]"><br><br>
   <label for="email">Email:</label>
-  <input type="text" id="email" name="user[email]"><br><br>
+  <input type="email" id="email" name="user[email]"><br><br>
   <label for="password">Password:</label>
-  <input type="text" id="password" name="user[password]"><br><br>
+  <input type="password" id="password" name="user[password]"><br><br>
   <input type="submit" value="Submit">
 </form>
 -->
