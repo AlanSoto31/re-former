@@ -1,24 +1,67 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h1 align="center">Rails Forms</h1>
 
-Things you may want to cover:
+# Project Description
 
-* Ruby version
+> Ruby on Rails - Forms:
 
-* System dependencies
+- Models, Views, and Controllers (MVC)
+- Data Structures & Relationships
+- Migrations
+- Routing
+- Associations
+- Validations
+- RESTful design
 
-* Configuration
+## Built With
+- Ruby on Rails
 
-* Database creation
+## Getting Started
+- To get a local copy up and running follow these simple steps.
 
-* Database initialization
+### Instructions
+- Open the console
+- Download or `git clone https://github.com/AlanSoto31/re-former.git`
+- `cd re-former`
+- run `bundle install`
+- run `yarn install`
+- run `rails db:migrate`
+- run `rails server`
 
-* How to run the test suite
+### Install
+- yarn
+- Ruby
+- Ruby on Rails
+- Text Editor
 
-* Services (job queues, cache servers, search engines, etc.)
+### Routes
+```shell
+  Verb   URI Pattern                                         Controller#Action
+  POST   http://localhost:3000/users(.:format)               users#create
+  GET    http://localhost:3000/users/new(.:format)           users#new
+  GET    http://localhost:3000/users/:id/edit(.:format)      users#edit
+  PUT    http://localhost:3000/users/:id(.:format)           users#update
+ ```
 
-* Deployment instructions
+## Authors
 
-* ...
+👤 **Will Nyamunokora**
+- Github: [@bigwizzo](https://github.com/bigwizzo)
+- Twitter: [@willnyamunokora](https://twitter.com/willnyamunokora)
+- Linkedin: [Will Nyamunokora](https://linkedin.com/in/willnyamunokora)
+
+👤 **Alan Soto**
+ - Github: [@AlanSoto31](https://github.com/AlanSoto31)
+ - Twitter: [@Alan95081574](https://twitter.com/Alan95081574)
+ - Linkedin: [Alan Soto](https://www.linkedin.com/in/alan-soto-valle-b9a0511aa/)
+
+## Contributing
+Contributions, issues and feature requests are welcome!
+Feel free to check the [issues page](https://github.com/AlanSoto31/re-former/issues).
+
+## Show your support
+Give a ⭐️ if you like this project!
+
+## License
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
